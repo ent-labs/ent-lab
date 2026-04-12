@@ -55,11 +55,11 @@ button {
 
 <script>
 function checkPass() {
-    let input = document.getElementById("pass").value.toUpperCase();
+    let input = document.getElementById("pass").value.trim().toUpperCase();
     let output = document.getElementById("output");
 
     // LOG 1
-if (input === "familiarity") {
+if (input === "FAMILIARITY") {
     output.style.display = "block";
     output.innerHTML = "ACCESS GRANTED<br>Opening log...";
     
@@ -69,7 +69,7 @@ if (input === "familiarity") {
 }
 
     // LOG 2 
-else if (input === "control") {
+else if (input === "CONTROL") {
     output.style.display = "block";
     output.innerHTML = "ACCESS GRANTED<br>Opening log...";
     
@@ -79,7 +79,7 @@ else if (input === "control") {
 }
 
     // LOG 3
-else if (input === "reset") {
+else if (input === "RESET") {
     output.style.display = "block";
     output.innerHTML = "ACCESS GRANTED<br>Opening log...";
     
