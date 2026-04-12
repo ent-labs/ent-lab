@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ENT.LABS ACCESS TERMINAL</title>
+
+<style>
+body {
+    background: black;
+    color: #00ff9c;
+    font-family: "Courier New", monospace;
+    text-align: center;
+    padding-top: 100px;
+}
+
+input {
+    background: black;
+    border: 1px solid #00ff9c;
+    color: #00ff9c;
+    padding: 10px;
+    font-family: monospace;
+}
+
+button {
+    background: black;
+    border: 1px solid #00ff9c;
+    color: #00ff9c;
+    padding: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#output {
+    margin-top: 30px;
+    text-align: left;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #00ff9c;
+    padding: 20px;
+    display: none;
+}
+</style>
+</head>
+
+<body>
+
+<h2>ENT.LABS SECURE ACCESS</h2>
+<p>AUTHORIZED PERSONNEL ONLY</p>
+
+<input type="password" id="pass" placeholder="ENTER ACCESS KEY">
+<button onclick="checkPass()">ENTER</button>
+
+<div id="output"></div>
+
+<script>
+function checkPass() {
+    let input = document.getElementById("pass").value;
+    let output = document.getElementById("output");
+
+    // LOG 1
+if (input === "familiarity") {
+    output.style.display = "block";
+    output.innerHTML = "ACCESS GRANTED<br>Opening log...";
+    
+    setTimeout(() => {
+        window.location.href = "DABVI_LOG.html";
+    }, 1500);
+}
+
+    // LOG 2 
+if (input === "control") {
+    output.style.display = "block";
+    output.innerHTML = "ACCESS GRANTED<br>Opening log...";
+    
+    setTimeout(() => {
+        window.location.href = "log_e01.html";
+    }, 1500);
+}
+
+    // LOG 3
+if (input === "reset") {
+    output.style.display = "block";
+    output.innerHTML = "ACCESS GRANTED<br>Opening log...";
+    
+    setTimeout(() => {
+        window.location.href = "log_e03.html";
+    }, 1500);
+}
+
+    // WRONG PASSWORD
+    else {
+        output.style.display = "block";
+        output.innerHTML = "ACCESS DENIED<br>Attempt Logged. Youre not supposed to be here, are you.";
+    }
+}
+</script>
+
+</body>
+</html>
